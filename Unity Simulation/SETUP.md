@@ -17,3 +17,4 @@ These steps were found in the ml-agents repostitory installation guide here: htt
     pip install -e ./ml-agents-envs
     pip install -e ./ml-agents
     ```
+7. The soccer environment example can be loaded in to Unity by navigating to Assets/ML-Agents/Examples/Soccer/Scenes in the project area of Unity then dragging the `SoccerTwos` scene into the Project Hierarchy.
