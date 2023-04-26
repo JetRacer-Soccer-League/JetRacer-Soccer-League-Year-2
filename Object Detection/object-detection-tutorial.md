@@ -130,7 +130,7 @@ For each image you want to delete:
 5. Run:
 
     ```
-    python3 onnx_export.py --model-dir=models/<DATASET-FOLDER>
+    python3 onnx_export.py --model-dir=models/<FOLDER-FROM-STEP-2>
     ```
 
 6. Run:
