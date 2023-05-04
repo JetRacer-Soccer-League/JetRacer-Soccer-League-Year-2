@@ -2,7 +2,7 @@
 
 The following github link includes the python code to run video capture on a Jetson Nano. 
 
-** **NOTE: 
+**Note:** 
 - The flip camera command may need to be deleted if video capture is upside-down
 - The "end recording" button has been defaulted to "q".
       
