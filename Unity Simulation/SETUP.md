@@ -30,7 +30,13 @@ These steps were found in the ml-agents repostitory installation guide here: htt
 
 9. The soccer environment example can be loaded in to Unity by navigating to Assets/ML-Agents/Examples/Soccer/Scenes in the project area of Unity then dragging the `SoccerTwos` scene into the Project Hierarchy.
 10. Replace the AgentSoccer.cs script with the AgentSoccer.cs script in the JetRacer-Soccer-Leage-Year-2 repository.
-11. Click on the 'SoocerFieldTwos' object in the project hierarchy in Unity. In the inspector, click on open next to prefab. For each soccer agent:
+11. Click on the 'SoccerFieldTwos' object in the project hierarchy in Unity. In the inspector, click on open next to prefab. For each soccer agent:
     - Click on the AgentCube child object. Change the Scale to X=1.5, Y=1, Z=3.
     - Click on the backwards sensors child object. Delete it.
     - Under behavior parameters, change the vector observation space size to 2, continuous actions to  2, discrete branches size to 0.
+12. Navigate to the ml-agents package and begin training.
+    ```
+    cd ml-agents
+    mlagents-lean config/poca/SoccerTwos.yaml --run-id=[whatever name you would like]
+    ```
+    When prompted to, click play in the Unity game engine. The agents should start training.
