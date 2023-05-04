@@ -4,7 +4,7 @@ The following steps were followed to set up the Unity ml-agents simulation envir
 These steps were found in the ml-agents repostitory installation guide here: https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md
 
 1. Install Unity Game Engine
-2. Install Python 3.8.6 or higher (Must be compatible with ml-agents package). IMPORTANT: Must use this version of python for the environment
+2. Install Python 3.8.6 (Must be compatible with ml-agents package). IMPORTANT: Must use this version of python for the environment
 3. Clone the ml-agents repository (https://github.com/Unity-Technologies/ml-agents)
     ```
     git clone --branch release_19 https://github.com/Unity-Technologies/ml-agents.git
