@@ -18,6 +18,7 @@ These steps were found in the ml-agents repostitory installation guide here: htt
     ```
 6. Install torch, ml-agents-envs, and ml-agents to the virtual environment. IMPORTANT! Install these packages in this order as the `mlagents` package depends on `mlagents_envs`. First navigate to the cloned ml-agents repostitory.
     ```
+    cd ml-agents
     pip install torch -f https://download.pytorch.org/whl/torch_stable.html
     pip install -e ./ml-agents-envs
     pip install -e ./ml-agents
