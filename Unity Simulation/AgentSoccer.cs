@@ -1,6 +1,7 @@
 using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
+using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Policies;
 
 public enum Team
@@ -9,7 +10,7 @@ public enum Team
     Purple = 1
 }
 
-public class Agent : MonoBehaviour
+public class AgentSoccer : Agent
 {
     // Note that that the detectable tags are different for the blue and purple teams. The order is
     // * ball
@@ -35,8 +36,8 @@ public class Agent : MonoBehaviour
 
     const float k_Power = 2000f;
     float m_Existential;
-    float m_LateralSpeed;
-    float m_ForwardSpeed;
+    // float m_LateralSpeed;
+    // float m_ForwardSpeed;
 
     [Header("RC Car Parameters")]
     public float maxSteeringAngle = 30.0f;
@@ -83,18 +84,18 @@ public class Agent : MonoBehaviour
         }
         if (position == Position.Goalie)
         {
-            m_LateralSpeed = 1.0f;
-            m_ForwardSpeed = 1.0f;
+            // m_LateralSpeed = 1.0f;
+            // m_ForwardSpeed = 1.0f;
         }
         else if (position == Position.Striker)
         {
-            m_LateralSpeed = 0.3f;
-            m_ForwardSpeed = 1.3f;
+            // m_LateralSpeed = 0.3f;
+            // m_ForwardSpeed = 1.3f;
         }
         else
         {
-            m_LateralSpeed = 0.3f;
-            m_ForwardSpeed = 1.0f;
+            // m_LateralSpeed = 0.3f;
+            // m_ForwardSpeed = 1.0f;
         }
         m_SoccerSettings = FindObjectOfType<SoccerSettings>();
         agentRb = GetComponent<Rigidbody>();
@@ -119,7 +120,6 @@ public class Agent : MonoBehaviour
             AddReward(-m_Existential);
         }
 
-        var a = 0;
 
         var continuousActions = actionBuffers.ContinuousActions;
         float throttle = Mathf.Clamp(continuousActions[0], -1, 1);
@@ -133,7 +133,7 @@ public class Agent : MonoBehaviour
 
     }
 
-    public void CollectObservations(VectorSensor sensor)
+    public override void CollectObservations(VectorSensor sensor)
     {
         // Add agent's current speed as an observation
         float speed = agentRb.velocity.magnitude;
