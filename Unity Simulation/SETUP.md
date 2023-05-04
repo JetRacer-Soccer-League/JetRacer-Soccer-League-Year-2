@@ -38,6 +38,6 @@ These steps were found in the ml-agents repostitory installation guide here: htt
 12. Navigate to the ml-agents package and begin training.
     ```
     cd ml-agents
-    mlagents-lean config/poca/SoccerTwos.yaml --run-id=[whatever name you would like]
+    mlagents-learn config/poca/SoccerTwos.yaml --run-id=[whatever name you would like]
     ```
     When prompted to, click play in the Unity game engine. The agents should start training.
