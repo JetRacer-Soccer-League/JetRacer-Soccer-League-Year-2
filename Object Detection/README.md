@@ -1,5 +1,7 @@
 The YoloV7 object detection model can be trained and evaluated in the following [Google Colab notebook](https://colab.research.google.com/drive/1mWgiQCeH25H3pVLu7JI98-XJGNznew_4?usp=sharing).
 
+The dataset and model can be found and used from the following [roboflow project link](https://universe.roboflow.com/jetracer-soccer-league/jetracer-soccer-league).
+
 The weights trained on 5/23/2023 can be found here: [weights_5_24_2023.pt](./weights_5_24_2023.pt).
 
 We used roboflow.com to annotate image and perform data augmentation. In order to annotate a large number of images we captured a video on the jetson nano board and split it frame by frame. We then uploaded the images to robolow and after annotating a few 100 we trained a model in robolfow to autolabel the rest of the images so they would only have to be verified rather than annotated from scratch.
